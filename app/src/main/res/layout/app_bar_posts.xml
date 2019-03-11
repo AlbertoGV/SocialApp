@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.PostsActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/white"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme">
+                    <ImageView android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/outline_camera_alt_black_24dp"/>
+
+                    <ImageView android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:src="@drawable/instagramlogo"
+                        />
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.AppBarLayout>
+                <FrameLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/fragment_container">
+
+
+                <include layout="@layout/content_posts"/>
+
+</FrameLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:itemHorizontalTranslationEnabled="true"
+        app:labelVisibilityMode="unlabeled"
+        android:background="?android:attr/windowBackground"
+        android:elevation="@dimen/activity_horizontal_margin"
+        app:itemIconTint="@color/nav_item_color"
+        app:menu="@menu/my_nav_items">
+
+    </android.support.design.widget.BottomNavigationView>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
