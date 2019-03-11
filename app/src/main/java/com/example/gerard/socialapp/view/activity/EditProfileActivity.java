@@ -36,7 +36,7 @@ public class EditProfileActivity extends AppCompatActivity {
         et_biography=findViewById(R.id.et_biography);
         et_web=findViewById(R.id.et_web);
         et_profileName=findViewById(R.id.name);
-
+//github
 
 
                 FirebaseDatabase.getInstance().getReference().child("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
